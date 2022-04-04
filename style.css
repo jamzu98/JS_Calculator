@@ -1,0 +1,127 @@
+:root {
+    --bgcolor: #3d3d3d;
+    --textColor: white;
+    --buttonBg: #494949;
+    --onHover: #707070;
+    --onClick: #161616;
+    --siteBg: #292828;
+}
+
+/* body  {
+    background-color: ;
+} */
+
+* {
+    color: var(--textColor);
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: var(--siteBg);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 75vh;
+    min-height: 500px;
+    padding: 10px;
+    margin-top: 50px;
+}
+
+.calculator {
+    width: 400px;
+    border: 2px var(--border) solid;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: var(--bgcolor);
+}
+
+.titlebar {
+    font-size: 16px;
+}
+
+.display-container > * {
+    border: 2px solid black;
+    height: 50px;
+    width: auto;
+}
+
+.display-container {
+    margin-bottom: 5px;
+}
+
+.output-screen {
+    text-align: right;
+}
+
+.input-screen {
+    text-align: left;
+}
+
+.screen {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.clear-delete {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0 10px 0;
+}
+
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+.button {
+    background-color: var(--buttonBg);
+    border: 1px solid var(--bgcolor);
+    border-radius: 5px;
+}
+
+.bigButton {
+    width: 100px;
+}
+
+button {
+    height: 50px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--onHover);
+}
+
+button:active {
+    background-color: var(--onClick);
+}
+
+#equalsButton {
+    background-color: rgb(0, 185, 0);
+    color: black;
+}
+
+#equalsButton:hover {
+    background-color: rgb(6, 235, 6);
+}
+
+.fa-github:hover {
+    color: #f20d0d;
+    animation-name: barrelRoll;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes barrelRoll {
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg); 
+    }
+}
